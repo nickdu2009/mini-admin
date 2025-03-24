@@ -1,5 +1,5 @@
 import { Dropdown, MenuProps } from 'antd';
-import { useGlobalStore } from '@/stores/useGlobalStore.ts';
+import { useGlobalStore } from '@/stores';
 import React from 'react';
 
 const Language : React.FC  =  () => {

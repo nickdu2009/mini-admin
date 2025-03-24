@@ -1,18 +1,18 @@
 import { Modal, message } from "antd";
-import { Ref, useImperativeHandle, useState } from "react";
+import React, { Ref, useImperativeHandle, useState } from "react";
 
 interface Props {
 	innerRef: Ref<{ showModal: (params: any) => void }>;
 }
 
-const PasswordModal = (props: Props) => {
+const PasswordModal : React.FC<Props> = (props: Props) => {
 	const [isModalVisible, setIsModalVisible] = useState(false);
 
 	useImperativeHandle(props.innerRef, () => ({
 		showModal
 	}));
 
-	const showModal = (params: { name: number }) => {
+	const showModal = (_params: { name: number }) => {
 		setIsModalVisible(true);
 	};
 

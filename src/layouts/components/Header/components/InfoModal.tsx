@@ -1,11 +1,11 @@
 import { Modal, message } from "antd";
-import { Ref, useImperativeHandle, useState } from "react";
+import React, { Ref, useImperativeHandle, useState } from "react";
 
 interface Props {
 	innerRef: Ref<{ showModal: (params: any) => void } | undefined>;
 }
 
-const InfoModal = (props: Props) => {
+const InfoModal : React.FC<Props> = (props: Props) => {
 	const [modalVisible, setModalVisible] = useState(false);
 
 	useImperativeHandle(props.innerRef, () => ({
